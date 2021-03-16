@@ -5,6 +5,6 @@
    <meta charset="utf-8">
  </head>
  <body>
-  <p>Hello, ${param.username}</p>
+  <p>Hello, ${usernameAttribute}</p>
  </body>
 </html>
