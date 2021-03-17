@@ -6,6 +6,8 @@
  </head>
  <body>
   <p>Hello, dear World!</p>
-  <a href="user/details/get"> Provide details </a>
+  <a href="employee/details/get"> Provide details </a>
+  <br>
+  <a href="v2/employee/details/get"> Provide details V2</a>
  </body>
 </html>

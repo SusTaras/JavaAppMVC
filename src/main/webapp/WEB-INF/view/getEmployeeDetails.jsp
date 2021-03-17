@@ -8,7 +8,7 @@
   <h1> Hello, could you please provide your name? </h1>
   <br>
   <form action="show" type="get">
-    <input type="text" placeholder="Name:" name="username"/>
+    <input type="text" placeholder="Name:" name="employeeName"/>
     <input type="submit"/>
   </form>
  </body>
