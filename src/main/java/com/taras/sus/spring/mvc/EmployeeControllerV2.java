@@ -2,8 +2,11 @@ package com.taras.sus.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/v2/employee")
@@ -16,7 +19,12 @@ public class EmployeeControllerV2 {
     }
 
     @RequestMapping("/details/show")
-    public String showEmployeeDetails(@ModelAttribute("employee") Employee employee) {
+    public String showEmployeeDetails(@Valid @ModelAttribute("employee") Employee employee,
+                                      BindingResult bindingResult) {
+
+        if(bindingResult.hasErrors()) {
+            return "getEmployeeDetailsV2";
+        }
 
         switch (employee.getCar()) {
             case "BMW":

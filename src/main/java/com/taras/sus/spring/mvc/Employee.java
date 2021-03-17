@@ -1,9 +1,11 @@
 package com.taras.sus.spring.mvc;
 
+import com.taras.sus.spring.mvc.validation.CheckEmail;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,8 +13,12 @@ import java.util.Map;
 @Setter
 @ToString
 public class Employee {
+    @Size(min = 2, message = "Minimum 2 symbols for field name")
     private String name;
+    @NotBlank(message = "Surname is required field")
     private String surname;
+    @Min(value = 0, message = "Salary can't be negative")
+    @Max(value = 25000, message = "Don't be a liar!")
     private int salary;
     private String department;
     private String favouriteAnimal;
@@ -20,6 +26,12 @@ public class Employee {
     private String carMessage;
     private Map<String, String> animals;
     private String[] languages;
+    @Pattern(
+            regexp = "\\+380\\d{9}",
+            message = "Use Ukrainian phone number")
+    private String phoneNumber;
+    @CheckEmail
+    private String email;
 
     Employee() {
         animals = new HashMap<>();

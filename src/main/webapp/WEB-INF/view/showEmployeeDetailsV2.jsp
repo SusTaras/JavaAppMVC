@@ -17,6 +17,10 @@
       </c:forEach>
   </ul>
   <br><br>
+  Phone number: ${employee.phoneNumber}
+  <br><br>
+  Email: ${employee.email}
+  <br><br>
   <img src=${employee.favouriteAnimal} />
  </body>
 </html>
