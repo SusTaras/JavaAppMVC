@@ -18,6 +18,14 @@
         <form:option value="Sales" label="Sales"/>
         <form:option value="Human Resources" label="HR"/>
     </form:select>
+    <form:select path="favouriteAnimal">
+        <form:options items="${employee.animals}"/>
+    </form:select>
+
+    Which car do you want?
+    BMW<form:radiobutton path="car" value="BMW"/>
+    Audi<form:radiobutton path="car" value="Audi"/>
+    Bicycle<form:radiobutton path="car" value="Bicycle"/>
 
     <input type="submit" />
   </form:form>

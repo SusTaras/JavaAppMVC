@@ -18,6 +18,21 @@ public class EmployeeControllerV2 {
 
     @RequestMapping("/details/show")
     public String showEmployeeDetails(@ModelAttribute("employee") Employee employee) {
+
+        switch (employee.getCar()) {
+            case "BMW":
+                employee.setCarMessage("BMW is definitely a good choice!");
+                break;
+            case "Audi":
+                employee.setCarMessage("Audi is a perfect car!");
+                break;
+            case "Bicycle":
+                employee.setCarMessage("Do you even know that bicycle is not a car?");
+                break;
+            default:
+                employee.setCarMessage("Unknown car!");
+        }
+
         return "showEmployeeDetailsV2";
     }
 }
