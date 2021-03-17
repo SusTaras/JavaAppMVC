@@ -27,6 +27,12 @@
     Audi<form:radiobutton path="car" value="Audi"/>
     Bicycle<form:radiobutton path="car" value="Bicycle"/>
 
+    Which languages do you know?
+    EN<form:checkbox path="languages" value="English"/>
+    UA<form:checkbox path="languages" value="Ukrainian"/>
+    RU<form:checkbox path="languages" value="Russian"/>
+    DE<form:checkbox path="languages" value="Deutsch"/>
+
     <input type="submit" />
   </form:form>
 

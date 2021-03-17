@@ -19,6 +19,7 @@ public class Employee {
     private String car;
     private String carMessage;
     private Map<String, String> animals;
+    private String[] languages;
 
     Employee() {
         animals = new HashMap<>();
